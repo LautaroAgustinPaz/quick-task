@@ -1,8 +1,24 @@
-# React + Vite
+# Prueba Tecnica - Quick task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descripción
+Esta aplicación es una interfaz CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar tareas, diseñada con React y estilos personalizados. Permite a los usuarios crear nuevas tareas, editar las existentes y eliminar aquellas que ya no necesitan. La aplicación interactúa con una API de MockAPI para almacenar y recuperar datos, proporcionando una experiencia fluida y dinámica.
 
-Currently, two official plugins are available:
+Características
+Crear Tareas: Añade nuevas tareas con títulos y descripciones personalizados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Leer Tareas: Visualiza una lista de todas las tareas creadas.
+
+Actualizar Tareas: Edita los detalles de las tareas existentes.
+
+Eliminar Tareas: Elimina tareas que ya no son necesarias.
+
+Interacción con API: Utiliza MockAPI para almacenar y recuperar datos de las tareas.
+
+Tecnologías Utilizadas
+React: Para la construcción de la interfaz de usuario.
+
+CSS: Para estilos personalizados y diseño responsivo.
+
+PrimeIcons: Para iconos atractivos y uniformes.
+
+MockAPI: Para simular el backend y gestionar los datos de las tareas.
