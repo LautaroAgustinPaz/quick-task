@@ -1,0 +1,305 @@
+/* Estilos especificos  */
+
+.navbar {
+    width: 100%;
+    min-height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tiempo {
+    font-size: 25px;
+    font-weight: 100;
+    font-family: "Kaisei Tokumin", serif;
+
+    background-image: linear-gradient(to top, #241b35, #9C86C6);
+    /* Degradado de izquierda a derecha */
+    -webkit-background-clip: text;
+    /* Esto hace que el texto se recorte al fondo */
+    color: transparent;
+    /* Hace que el color del texto sea transparente para ver el degradado */
+}
+
+.tareas-contenedor {
+    background-image: linear-gradient(-180deg, #9C86C6 0%, #FFFFFF 100%);
+    border-radius: 30px 30px 0px 0px;
+    width: 100%;
+    min-height: 85%;
+
+    box-shadow: rgba(0, 0, 0, 0.365) 0px 2px 4px 0px inset;
+    padding: 20px;                                              
+}
+
+/*      Formulario      */
+
+.task-form {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 10px 20px 18px 20px;
+}
+
+.task-form > input {
+    width: 100%;
+    min-height: 40px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    white-space: pre-wrap;
+    color: #18110b;
+
+    font-size: 30px;
+}
+
+.task-form > textarea {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    color: rgb(86, 86, 86);
+
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.button-cancelar, .button-anadir {
+    border: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+
+.button-cancelar {
+    background-color: #9f9f9f;
+}
+
+.button-anadir {
+    background-color: #5f4297;
+}
+
+/* -------------------------------------------------------------------------------- FIN  */
+
+.task-list {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-card {
+    padding: 15px 20px 20px 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.task-card > p {
+    color: rgb(86, 86, 86);
+    font-size: 18px;
+}
+
+/*      Titulo tarea CARD + botones      */
+.card-group-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.p-checkbox-input {
+    padding: 20px;
+}
+
+.btn-editar,
+.btn-eliminar {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Bordes redondos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* Sombra */
+    background-color: #4caf50;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    width: 50px;
+    /* Ancho fijo */
+    height: 50px;
+    /* Altura fija */
+    transition: background-color 0.3s;
+    outline: none;
+    margin: 5px;
+    /* Espaciado entre botones */
+}
+
+/* Estilo de hover para ambos botones */
+.btn-editar:hover,
+.btn-eliminar:hover {
+    opacity: 0.8;
+    /* Transparencia al pasar el cursor */
+}
+
+/* Estilos para el contenedor del checkbox */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 5px;
+    /* Añadir margen derecho para separarlo de otros elementos */
+}
+
+/* Oculta el checkbox real */
+.custom-checkbox input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Estilos para el checkmark personalizado */
+.checkmark {
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    /* Hace que el checkbox sea redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+/* Cuando el checkbox está seleccionado */
+.custom-checkbox input:checked~.checkmark {
+    background-color: #241b35;
+}
+
+/* Estilos para el icono de checkmark */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    border: solid #ccc;
+    /* Color de la flecha en gris */
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    display: none;
+    /* Oculta la flecha inicialmente */
+}
+
+/* Muestra el checkmark cuando está seleccionado */
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+    border-color: white;
+    /* Cambia el color de la flecha a blanco */
+}
+
+/* Centrando el icono de checkmark */
+.custom-checkbox .checkmark:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+/* Botones personalizados */
+.custom-button {
+    border-radius: 50%;
+    /* Bordes redondos */
+    border: none;
+    /* Sin borde */
+    color: white;
+    /* Color del texto */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* Sombra */
+    transition: background-color 0.3s;
+    outline: none;
+    margin: 5px;
+    /* Espaciado entre botones */
+}
+
+/* Estilo para el botón de editar */
+.custom-button.btn-editar {
+    background-color: #67c06a;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    /* Color de fondo */
+}
+
+/* Estilo para el botón de eliminar */
+.custom-button.btn-eliminar {
+    background-color: #fa5d51;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+/* Efecto hover */
+.custom-button:hover {
+    opacity: 0.8;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .card-group-inline {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .task-card > p {
+    color: rgb(86, 86, 86);
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+    }
+}
