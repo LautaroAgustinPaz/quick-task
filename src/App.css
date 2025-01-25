@@ -1,4 +1,4 @@
-/* Estilos especificos  */
+/*      Estilos especificos       */
 
 .navbar {
     width: 100%;
@@ -180,6 +180,7 @@
     user-select: none;
     margin-right: 5px;
     /* Añadir margen derecho para separarlo de otros elementos */
+    padding-bottom: 1px;
 }
 
 /* Oculta el checkbox real */

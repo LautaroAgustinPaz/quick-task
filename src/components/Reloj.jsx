@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 
 const Reloj = () => {
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState(new Date());                // Inicializa con una fecha
 
   useEffect(() => {
     const timer = setInterval(() => {

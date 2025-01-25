@@ -1,12 +1,14 @@
 import api from "./api";
 
-// Obtener todas las tareas
-export const getTasks = async () => {
-  const response = await api.get("/");
-  return response.data;
+//                              CRUD (Crear, Leer, Actualizar, Eliminar)
+
+// Obtener todas las tareas (Leer)
+export const getTasks = async () => {                     // unción asincrónica llamada
+  const response = await api.get("/");              // Llamada a la api con el Metodo .GET
+  return response.data.response;                                   // Devolver los datos de la respuesta:
 };
 
-// Crear una nueva tarea
+// Crear una nueva tarea 
 export const createTask = async (task) => {
   if (!task.title) {
     throw new Error("El campo 'title' es requerido");
