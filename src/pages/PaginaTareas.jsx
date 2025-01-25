@@ -1,6 +1,6 @@
 import React from 'react'
-import Tareas from '../components/Tareas';
-import Reloj from '../components/Reloj';
+import Tareas from '../components/Tareas.jsx';
+import Reloj from '../components/Reloj.jsx';
 
 const PaginaTareas = () => {
 

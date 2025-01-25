@@ -1,5 +1,5 @@
 import './App.css'
-import PaginaTareas from './pages/paginaTareas'
+import PaginaTareas from './pages/PaginaTareas.jsx'
 
 function App() {
 
