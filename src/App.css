@@ -96,54 +96,39 @@
 
 /* -------------------------------------------------------------------------------- FIN  */
 
+/*      Contenedor padre        */
 .task-list {
+    width: 100%;
+    max-height: 800px;
     padding-top: 20px;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
+/*      CARD        */
 .task-card {
+    display: flex;
+    flex-direction: column;
     padding: 15px 20px 20px 20px;
     background-color: white;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    word-wrap: break-word; /* Permite que el texto se ajuste al ancho */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    max-width: 100%; /* Asegura que la tarjeta no se salga del contenedor */
 }
 
 .card-title {
+    padding-top: 15px;
     font-size: 30px;
     font-weight: 600;
+    text-align: center;
 }
 
-.task-card > p {
-    color: rgb(86, 86, 86);
-    font-size: 18px;
-}
-
-/*      Titulo tarea CARD + botones      */
-.card-group-inline {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.task-actions {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 8px;
-}
-
-.p-checkbox-input {
-    padding: 20px;
-}
-
-.btn-editar,
-.btn-eliminar {
+/*      Botones         */
+.btn-editar, .btn-eliminar {
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    /* Bordes redondos */
+    border-radius: 50%; /* Bordes redondos */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,25 +136,30 @@
         rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
         rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     /* Sombra */
-    background-color: #4caf50;
-    /* Color de fondo */
-    color: white;
-    /* Color del texto */
-    width: 50px;
-    /* Ancho fijo */
-    height: 50px;
-    /* Altura fija */
+    background-color: #4caf50; /* Color de fondo */
+    color: white; /* Color del texto */
+    width: 50px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
     transition: background-color 0.3s;
     outline: none;
-    margin: 5px;
-    /* Espaciado entre botones */
+    margin: 5px; /* Espaciado entre botones */
 }
 
-/* Estilo de hover para ambos botones */
-.btn-editar:hover,
-.btn-eliminar:hover {
-    opacity: 0.8;
-    /* Transparencia al pasar el cursor */
+.btn-editar:hover, .btn-eliminar:hover {
+    opacity: 0.8; /* Transparencia al pasar el cursor */
+}
+/*      Botones         */
+
+.task-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.p-checkbox-input {
+    padding: 20px;
 }
 
 /* Estilos para el contenedor del checkbox */
@@ -282,9 +272,16 @@
     align-content: center;
 }
 
-/* Efecto hover */
-.custom-button:hover {
-    opacity: 0.8;
+.task-card > p {
+    color: rgb(86, 86, 86);
+    font-size: 18px;
+    padding: 10px 0;
+    /* Añadir padding para un espacio vertical */
+    overflow-wrap: break-word;
+    /* Asegura que las palabras largas se ajusten */
+    flex-grow: 1;
+    /* Permite que el párrafo se expanda verticalmente */
+    text-align: center;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -301,6 +298,5 @@
     color: rgb(86, 86, 86);
     font-size: 18px;
     padding-top: 10px;
-    text-align: center;
     }
 }
